@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="id">
+  <head><!-- Swiper CSS -->
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekstrakurikuler SMK Artanita</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="jpeg" href="image/logo.png" />
+    <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 20px;
+  }
+  .navbar-center a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  .navbar-center a:hover{
+    color: #2a652c; /* Hijau lebih gelap */
+  }
+  
+  
+  .navbar-left img {
+    height: 60px;
+    margin-right: 15px;
+  }
+  .navbar-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgb(42, 42, 42);
+  font-weight: bold;
+}
+  header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: fixed;      /* Bikin nempel di layar */
+      top: 0;               /* Nempel ke atas */
+      width: 100%;          /* Biar selebar layar */
+      z-index: 1000;        /* Biar nggak ketiban elemen lain */
+    }
+    
+    .title-ekskul {
+  margin: 0;
+  font-size: 20px;
+  color: #111;
+}
+
+.subtitle-ekskul {
+  display: block;
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+}
+/*end navbar*/ 
+
+
+
+
+    .swiper {
+      width: 100%;
+      height: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+      gap: 40px;
+    }
+
+    .image {
+      flex: 1 1 400px;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .content {
+      flex: 1 1 400px;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      flex: 1 1 100px;
+    }
+
+    .stat-item h2 {
+      font-size: 2rem;
+      color: #3b82f6;
+      margin: 0;
+    }
+
+    .stat-item p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .stats {
+        justify-content: center;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #111;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+    }
+    .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 0 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  footer table td {
+    padding: 5px 10px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-logo, .footer-links, .footer-sosmed {
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .footer-logo h2 {
+    color: #f1c40f;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a,
+  .footer-sosmed a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover,
+  .footer-sosmed a:hover {
+    color: #f1c40f;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+  }
+  /*END FOOTER*/
+  /*tombol login*/
+
+
+  .btn-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;  /* Tambahkan sedikit ruang di sekitar tombol */
+  background-color: #0048ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.2s ease;
+  animation: float 2s ease-in-out infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;  /* Pastikan tombol berada di atas elemen lain */
+}
+
+.icon-login {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.btn-login:hover {
+  transform: scale(1.1);
+}
+
+.btn-login:active {
+  background-color: #3e568e; /* warna lebih gelap saat diklik */
+  transform: scale(1.05); /* sedikit lebih kecil saat klik */
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/*end tombol login*/
+/*ekskul seru*/
+.containerr {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+.section-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+.step-box {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 16px;
+    font-weight: 600;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+.step-box:hover {
+    transform: translateY(-5px);
+}
+/*end ekskul seru*/
+  </style>
+</head>
+<body>
+ <!-- Header di dalam <body> kamu -->
+<header>
+  <div class="navbar">
+    <div class="navbar-left" data-aos="fade-right"data-aos-duration="1200">
+      <img src="image/logo.png" alt="Logo SMK Artanita" />
+      <div class="navbar-text">
+        <h1 class="title-ekskul">EKSTRAKULIKULER</h1>
+        <p class="subtitle-ekskul">SMK ARTANITA</p>
+      </div>
+    </div>
+    <div class="navbar-center"data-aos="fade-down"data-aos-duration="1200">
+      <a href="ekskul.html">EKSKUL</a>
+      <a href="artikel.php">BERITA</a>
+      <a href="kontak.html">KONTAK</a>
+      <a href="pendaftaran.php">DAFTAR</a>
+    </div>
+  </div>
+</header>
+
+      </div>
+    </div>
+     </div>
+     </div>
+     <a href="Log.php">
+      <button class="btn-login">
+        <img src="image/username.png" alt="Login Icon" class="icon-login">
+        Login 
+      </button>
+    </a>
+    
+     
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="image/b1.jpg" alt="Gambar 1">
+    </div>
+    <div class="swiper-slide">
+      <img src="image/b2.jpg" alt="Gambar 2">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="image">
+    <img src="image/f2.jpg" data-aos="fade-right"data-aos-duration="1500" alt="Tim Kodingkeun">
+  </div>
+  <div class="content" data-aos="zoom-in">
+    <h1>Kembangkan Minat Bakatmu<br> <strong></strong></h1>
+    <p>Ekstrakurikuler bukan cuma tempat bermain, tapi juga wadah untuk mengasah bakat dan mengembangkan diri.
+      Di sini kamu bisa belajar kerja sama, tanggung jawab, dan kepemimpinan melalui berbagai kegiatan menarik seperti olahraga, seni, teknologi, dan organisasi.</p>
+    <div class="stats" data-aos="flip-left"data-aos-duration="1500">
+      <div class="stat-item" >
+        <h2>15</h2>
+        <p><b>MPK</b></p>
+      </div>
+      <div class="stat-item">
+        <h2>13</h2>
+        <p><b>PRAMUKA</b></p>
+      </div>
+      <div class="stat-item">
+        <h2>15</h2>
+        <p><b>OSIS</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container"data-aos="zoom-in-down">
+  <h1>Solusi Ekskul Digital untuk Sekolah Anda</h1>
+  <div class="grid">
+    <div class="card"data-aos="zoom-in-down">
+      <div style="font-size: 48px;">🎓</div>
+      <h3>Gratis Pendaftaran</h3>
+      <p>Ekskul kami terbuka untuk semua siswa tanpa biaya pendaftaran.</p>
+    </div>
+    <div class="card"data-aos="fade-left">
+      <div style="font-size: 48px;">🧑‍🏫</div>
+      <h3>Pendampingan Rutin</h3>
+      <p>Pembina dan mentor siap membimbing setiap kegiatan ekskul secara konsisten.</p>
+    </div>
+    <div class="card"data-aos="fade-right">
+      <img src="https://img.icons8.com/ios/100/000000/design.png" alt="Kegiatan Kreatif"/>
+      <h3>Kegiatan Kreatif</h3>
+      <p>Kegiatan ekskul kami penuh proyek menarik dan aktivitas seru tiap minggunya.</p>
+    </div>
+    <div class="card"data-aos="fade-left">
+      <div style="font-size: 48px;">💬</div>
+      <h3>Konsultasi Bebas</h3>
+      <p>Tim ekskul siap diskusi kebutuhanmu, baik via chat, grup, maupun langsung.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="containerr">
+  <div class="section-title">
+      Ekskul Seru, Prestasi Maju!
+  </div>
+  <div class="steps">
+      <div class="step-box">Pendaftaran dan Pengenalan</div>
+      <div class="step-box">Latihan Rutin dan Workshop</div>
+      <div class="step-box">Ikut Event & Lomba</div>
+      <div class="step-box">Pengembangan Skill dan Soft Skill</div>
+      <div class="step-box">Sertifikat & Penghargaan</div>
+      <div class="step-box">Menjadi Inspirasi untuk Sekolah</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>Info Sekolah</h2>
+<p><strong>Website Ekstrakurikuler SMK Artanita</strong></p>
+<table style="margin-top: 10px;">
+  <tr>
+    <td>NSPN</td>
+    <td>: 20224526</td>
+  </tr>
+  <tr>
+    <td>Alamat</td>
+    <td>: JL. CIEUNTEUNG NO:112 A</td>
+  </tr>
+  <tr>
+    <td>Telepon</td>
+    <td>: 081933404437</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>: smk.artanita.tasikmalaya@gmail.com</td>
+  </tr>
+  <tr>
+    <td>WhatsApp</td>
+    <td>: 081933404437</td>
+  </tr>
+</table>
+
+    </div>
+    <div class="footer-links">
+      <h3>Link Cepat</h3>
+      <ul>
+        <li><a href="index.html">Halaman utama</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="ekskul.html">Ekskul</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      
+      </ul>
+    </div>
+    <div class="footer-sosmed">
+      <h3>Ikuti Kami</h3>
+      <a href="https://www.instagram.com/smkartanita_official?igsh=MXZhZHg1YTFwNG9qcg==">Instagram</a><br>
+      <a href="https://www.facebook.com/share/19D8d8gbXP/">Facebook</a><br>
+      <a href="https://www.tiktok.com/@smks_artanita?is_from_webapp=1&sender_device=pc">Tiktok</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; SMK Artanita Tasikmalaya 2025. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: 'slide',
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
+    

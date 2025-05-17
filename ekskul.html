@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekstrakurikuler SMK Artanita</title>
+    <link rel="icon" type="jpeg" href="image/logo.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 20px;
+}
+.navbar-center a {
+  text-decoration: none;
+  color:#4CAF50;
+  font-weight: bold;
+}
+.navbar-center a:hover{
+  color:#2a652c
+}
+ button {
+    color: black;
+    background-color: #f1c40f;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 17px;
+    align-content: center;
+  }
+
+.navbar-left img {
+  height: 60px;
+  margin-right: 15px;
+}
+header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: fixed;      /* Bikin nempel di layar */
+    top: 0;               /* Nempel ke atas */
+    width: 100%;          /* Biar selebar layar */
+    z-index: 1000;        /* Biar nggak ketiban elemen lain */
+  }
+  
+.navbar-left h1 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.navbar-left span {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+}
+
+.navbar-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: darkred;
+  font-weight: bold;
+}
+/* /end navbar/ */
+.card.hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.card {
+  max-height: 1000px; /* gedein secukupnya */
+  opacity: 1;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  flex: 1;
+  font-size: 14px;
+  color: #555;
+}
+
+.btn {
+  font-style: italic;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.btn:hover {
+  background-color: #2a652c;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+} 
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* /end Keterangan Ekskul/ */
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer table td {
+  padding: 5px 10px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo, .footer-links, .footer-sosmed {
+  flex: 1;
+  margin: 20px;
+}
+
+.footer-logo h2 {
+  color: #f1c40f;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a,
+.footer-sosmed a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover,
+.footer-sosmed a:hover {
+  color: #f1c40f;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+
+
+
+.btn-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;  /* Tambahkan sedikit ruang di sekitar tombol */
+  background-color: #0048ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.2s ease;
+  animation: float 2s ease-in-out infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;  /* Pastikan tombol berada di atas elemen lain */
+}
+
+.icon-login {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.btn-login:hover {
+  transform: scale(1.1);
+}
+
+.btn-login:active {
+  background-color: #3e568e; /* warna lebih gelap saat diklik */
+  transform: scale(1.05); /* sedikit lebih kecil saat klik */
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+/* /end tombol login/ */
+</style>
+  <body>
+    <header>
+    <div class="navbar">
+      <div class="navbar-left" data-aos="fade-right"data-aos-duration="1200">
+        <img src="image/logo.png" alt="Logo SMK Artanita" />
+        <h1>
+          EKSTRAKULIKULER<br />
+          <span>SMK ARTANITA</span>
+        </h1>
+      </div>
+      <div class="navbar-center" data-aos="fade-down"data-aos-duration="1200">
+        <a href="home.html">HOME</a>
+          <a href="artikel.php">BERITA</a>
+          <a href="kontak.html">KONTAK</a>
+          <a href="pendaftaran.php">DAFTAR</a>
+          </div>
+          </div>
+        
+
+         </header>
+      
+      </div>
+       </div>
+         </div>
+           </div>
+      <br>
+       <br>
+        <br>
+         <br>
+          <br>
+           <br>
+            <br>
+            <a href="Log.php">
+              <button class="btn-login">
+                <img src="image/username.png" alt="Login Icon" class="icon-login">
+                Login 
+              </button>
+            </a>
+            
+
+     
+  
+     <div class="container"data-aos="zoom-in-down"data-aos-duration="1500">
+      <h1 style="text-align: center;">Keterangan Ekskul</h1>
+      <div class="grid">
+        <!-- Card 1 -->
+        <div class="card" data-aos="fade-up"data-aos-duration="1200">
+          <img src="image/pramuka.jpg" alt="Foto 1">
+          <div class="card-content">
+            <h3>Ekstrakulikuler 1</h3>
+            <p><b>PRAMUKA</b></p>
+            <a href="https://sitiaisyah826.github.io/pramuka/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card" data-aos="fade-up"data-aos-duration="1200">
+          <img src="image/futsal.jpeg" alt="Foto 2">
+          <div class="card-content">
+            <h3>Ekstrakulikuler 2</h3>
+            <p><b>FUTSAL</b></p>
+            <a href="https://garrzz.github.io/futsal/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card" data-aos="fade-up"data-aos-duration="1200">
+          <img src="image/rohis.jpg" alt="Foto 3">
+          <div class="card-content">
+            <h3>Ekstrakulikuler 3</h3>
+            <p><b>ROHIS</b></p>
+            <a href="https://sitiaisyah826.github.io/Rohis/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+    
+        <!-- Card 4-9 dengan class hidden -->
+        <div class="card hidden"data-aos-duration="1200">
+          <img src="image/volly.jpg" alt="Foto 4">
+          <div class="card-content">
+            <h3>Ekstrakulikuler 4</h3>
+            <p><b>VOLLY</b></p>
+            <a href="https://sitiaisyah826.github.io/volly/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+        <div class="card hidden"data-aos-duration="1200">
+          <img src="image/bg.jpg" alt="Foto 5">
+          <div class="card-content">
+            <h3>Ekstrakulikuler 5</h3>
+            <p><b>BADMINTON</b></p>
+            <a href="https://garrzz.github.io/badminton/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+        <div class="card hidden"data-aos-duration="1200">
+          <img src="image/paskibra.jpg" alt="Foto 6">
+          <div class="card-content">
+            <h3>Ekstrakulikuler 6</h3>
+            <p><b>PASKIBRA</b></p>
+            <a href="https://sitiaisyah826.github.io/Paskibra/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+        <div class="card hidden"data-aos-duration="1200">
+          <img src="image/paduan suara.jpg" alt="Foto 7">
+          <div class="card-content">
+            <h3>Ekstrakulikuler 7</h3>
+            <p><b>PADUAN SUARA</b></p>
+            <a href="https://garrzz.github.io/Paduan-suara/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+        <div class="card hidden"data-aos-duration="1200">
+          <img src="image/bg pmr .jpg" alt="Foto 8">
+          <div class="card-content">
+            <h3>Ekstrakulikuler 8</h3>
+            <p><b>PMR</b></p>
+            <a href="https://sitiaisyah826.github.io/EkstrakulikulerPMR/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+        <div class="card hidden"data-aos-duration="1200">
+          <img src="image/pencak silat.jpg" alt="Foto 9">
+          <div class="card-content">
+            <h3>Ekstrakurikuler 9</h3>
+            <p><b>PENCAK SILAT</b></p>
+            <a href="https://garrzz.github.io/Paduan-suara/" class="btn">Lihat Keterangan</a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Tombol Lihat Semua -->
+      <div style="text-align: center; margin-top: 20px; font-style: italic;">
+        <button id="toggleButton">Lihat Semua</button>
+      </div>
+    </div>
+  
+    <br>
+    <br>
+    
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>Info Sekolah</h2>
+  <p><strong>Website Ekstrakurikuler SMK Artanita</strong></p>
+  <table style="margin-top: 10px;">
+    <tr>
+      <td>NSPN</td>
+      <td>: 20224526</td>
+    </tr>
+    <tr>
+      <td>Alamat</td>
+      <td>: JL. CIEUNTEUNG NO:112 A</td>
+    </tr>
+    <tr>
+      <td>Telepon</td>
+      <td>: 081933404437</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>:smk.artanita.tasikmalaya@gmail.com</td>
+    </tr>
+    <tr>
+      <td>WhatsApp</td>
+      <td>: 081933404437</td>
+    </tr>
+  </table>
+
+      </div>
+      <div class="footer-links">
+        <h3>Link Cepat</h3>
+        <ul>
+          <li><a href="index.html">Halaman utama</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="ekskul.html">Ekskul</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        
+      
+        </ul>
+      </div>
+      <div class="footer-sosmed">
+        <h3>Ikuti Kami</h3>
+        <a href="https://www.instagram.com/smkartanita_official?igsh=MXZhZHg1YTFwNG9qcg==">Instagram</a><br>
+        <a href="https://www.facebook.com/share/19D8d8gbXP/">Facebook</a><br>
+        <a href="https://www.tiktok.com/@smks_artanita?is_from_webapp=1&sender_device=pc">Tiktok</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; SMK Artanita Tasikmalaya 2025. All rights reserved.</p>
+    </div>
+  </footer>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("toggleButton");
+    let showAll = false;
+
+    toggleBtn.addEventListener("click", () => {
+      const hiddenCards = document.querySelectorAll(".card");
+
+      hiddenCards.forEach((card, index) => {
+        // Asumsikan hanya 3 card pertama yang selalu terlihat
+        if (index >= 3) {
+          if (showAll) {
+            card.classList.add("hidden");
+          } else {
+            card.classList.remove("hidden");
+          }
+        }
+      });
+
+      toggleBtn.textContent = showAll ? "Lihat Semua" : "Lihat Sedikit";
+      showAll = !showAll;
+    });
+  });
+</script>
+
+
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init();
+   </script>
+  
+  
+  </body>
+</html>
