@@ -170,7 +170,7 @@ h1 {
 /*section*/
 .hero {
   position: relative;
-  background-image: url('../image/a-1.jpg'); /* ganti dengan nama file gambarmu */
+  background-image: url('a-1.jpg'); /* ganti dengan nama file gambarmu */
   background-size: cover;
   background-position: center;
   height: 100vh;
