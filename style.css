@@ -1,0 +1,469 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 20px;
+  }
+  .navbar-center a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  .navbar-center a:hover{
+    color: #2a652c; /* Hijau lebih gelap */
+  }
+  
+  
+  .navbar-left img {
+    height: 60px;
+    margin-right: 15px;
+  }
+  .navbar-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgb(42, 42, 42);
+  font-weight: bold;
+}
+  header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: fixed;      /* Bikin nempel di layar */
+      top: 0;               /* Nempel ke atas */
+      width: 100%;          /* Biar selebar layar */
+      z-index: 1000;        /* Biar nggak ketiban elemen lain */
+    }
+    .navbar-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.2;
+    }
+    
+    .title-ekskul,
+    .subtitle-ekskul {
+      margin: 0;         /* Hapus jarak luar bawaan */
+      padding: 0;        /* Hapus jarak dalam jika ada */
+      line-height: 1.2;  /* Rapatkan jarak antar baris */
+    }
+    
+    
+    
+    .title-ekskul {
+  margin: 0;
+  font-size: 20px;
+  color: #111;
+}
+
+.subtitle-ekskul {
+  display: block;
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+}
+/*end navbar*/
+
+
+/*artike php*/
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+}
+
+.artikel {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.artikel h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.artikel p {
+  line-height: 1.6;
+}
+
+.artikel small {
+  display: block;
+  margin-top: 10px;
+  color: #1668c5;
+  font-style: italic;
+}
+/*end artikel php*/
+/*tombol login*/
+
+.btn-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;  /* Tambahkan sedikit ruang di sekitar tombol */
+  background-color: #0048ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.2s ease;
+  animation: float 2s ease-in-out infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;  /* Pastikan tombol berada di atas elemen lain */
+}
+
+.icon-login {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.btn-login:hover {
+  transform: scale(1.1);
+}
+
+.btn-login:active {
+  background-color: #3e568e; /* warna lebih gelap saat diklik */
+  transform: scale(1.05); /* sedikit lebih kecil saat klik */
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+
+
+
+
+/*section*/
+.hero {
+  position: relative;
+  background-image: url('../image/a-1.jpg'); /* ganti dengan nama file gambarmu */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: white;
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+  background-color: red;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.content p {
+  font-size: 1.2rem;
+}
+
+.artikel {
+  padding: 40px 20px;
+}
+
+.artikel h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/*bagian kumpulan  eskul*/
+.ekskul-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  
+  .ekskul-card {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .ekskul-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .ekskul-card img:hover {
+    transform: scale(1.05);
+  }
+  
+  .ekskul-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  /*end*/
+  /*ekskul seru*/
+  .containerr {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+.section-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+.step-box {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 16px;
+    font-weight: 600;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+.step-box:hover {
+    transform: translateY(-5px);
+}
+/*end ekskul seru*/
+  /*footer*/
+  .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 0 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  footer table td {
+    padding: 5px 10px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-logo, .footer-links, .footer-sosmed {
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .footer-logo h2 {
+    color: #f1c40f;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a,
+  .footer-sosmed a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover,
+  .footer-sosmed a:hover {
+    color: #f1c40f;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+  }
+  /*bagian ekskul*/
+ 
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  
+  .photo-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .photo-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .photo-card p {
+    padding: 10px;
+  }
+  
+  .photo-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  
+  .photo-card a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  /*end ekskul*/
+  /*image ekskul*/
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .card {
+    background: rgb(178, 178, 178);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+  }
+/*end image ekskul*/  
+/*end footer*/
+/*wa*/
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #dad41e;
+  color: white;
+  padding: 20px 35px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #dad41e;
+}
+
+.wa-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #dad41e;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: bounce 1.5s infinite;
+}
+
+/*end wa*/

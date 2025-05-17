@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 20px;
+}
+.navbar-center a {
+  text-decoration: none;
+  color: darkred;
+  font-weight: bold;
+}
+ button {
+    color: black;
+    background-color: #f1c40f;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 17px;
+    align-content: center;
+  }
+
+.navbar-left img {
+  height: 60px;
+  margin-right: 15px;
+}
+header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: fixed;      /* Bikin nempel di layar */
+    top: 0;               /* Nempel ke atas */
+    width: 100%;          /* Biar selebar layar */
+    z-index: 1000;        /* Biar nggak ketiban elemen lain */
+  }
+  
+.navbar-left h1 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.navbar-left span {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+}
+
+.navbar-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: darkred;
+  font-weight: bold;
+}
+/*end navbar*/
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  flex: 1;
+  font-size: 14px;
+  color: #555;
+}
+
+.btn {
+  background-color: #f43f5e;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.btn:hover {
+  background-color: #e11d48;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+/*end Keterangan Ekskul*/
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer table td {
+  padding: 5px 10px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo, .footer-links, .footer-sosmed {
+  flex: 1;
+  margin: 20px;
+}
+
+.footer-logo h2 {
+  color: #f1c40f;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a,
+.footer-sosmed a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover,
+.footer-sosmed a:hover {
+  color: #f1c40f;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+/*End Footer*/
